@@ -1,0 +1,28 @@
+.Navlinks {
+  margin-left: auto;
+  padding-right: 1.5rem;
+  
+  &__MenuButton {
+    border: none;
+    background-color: #fff;
+    outline: none;
+  }
+  
+  &__Hamburger {
+    height: 35px;
+  }
+
+  &__Menu {
+    background-color: $DarkViolet;
+    border-radius: 8px;
+  }
+  
+  &__list {
+    list-style-type: none;
+    
+    a {
+      text-decoration: none;
+      color:rgb(247, 244, 244);
+    }
+  }
+}

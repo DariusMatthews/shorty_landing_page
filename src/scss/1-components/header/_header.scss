@@ -1,0 +1,14 @@
+.header {
+  display: grid;
+
+    &__imgContainer {
+      overflow: hidden;
+      margin: 0 -25px;
+    }
+
+    &__img {
+      width: 575px;
+      padding-left: 25px;
+      padding-top: 1rem;
+    }
+}

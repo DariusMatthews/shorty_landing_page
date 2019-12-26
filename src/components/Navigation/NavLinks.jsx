@@ -23,25 +23,42 @@ export default function NavLinks() {
           <ul className="Navlinks__list">
             <li><a href="/">Features</a></li>
             <li><a href="/">Pricing</a></li>
-            <li><a href="/">Resources</a></li>
+            <li style={{marginBottom: "1rem"}}><a href="/">Resources</a></li>
           </ul>
+          <hr style={styles.bottomBorder} />
           <ul className="Navlinks__list">
-            <li><a href="/">Login</a></li>
-            <li><button>Sign Up</button></li>
+            <li style={{marginTop: ".7rem"}}><a href="/">Login</a></li>
+            <li><button style={styles.dropBtn}>Sign Up</button></li>
           </ul>
         </div>
       );
     }
   }
 
-  // drop down menu styles
+  // drop down menu specific styles
   const styles = {
     menuStyles: {
       position: "absolute", 
-      left: "1rem", 
+      left: "1.3rem", 
       top: "15vh",
       width: "88%",
       textAlign: "center"
+    },
+    dropBtn: {
+      color: "rgb(247, 244, 244)",
+      backgroundColor: "hsl(180, 66%, 49%)",
+      width: "90%",
+      border: "none",
+      borderRadius: "50px",
+      paddingTop: ".7rem",
+      paddingBottom: ".7rem",
+      fontWeight: 700
+    },
+    bottomBorder: {
+      borderBottom: "1px solid hsla(257, 7%, 63%, .05)",
+      width: "75%",
+      position: "relative",
+      left: "12%"
     }
   }
 

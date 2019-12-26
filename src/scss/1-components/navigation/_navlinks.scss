@@ -1,6 +1,6 @@
 .Navlinks {
   margin-left: auto;
-  padding-right: 1.5rem;
+  font-weight: $Bold;
   
   &__MenuButton {
     border: none;
@@ -15,14 +15,20 @@
   &__Menu {
     background-color: $DarkViolet;
     border-radius: 8px;
+    padding-top: 1rem;
+    padding-bottom: 1.3rem;
   }
   
   &__list {
     list-style-type: none;
-    
-    a {
-      text-decoration: none;
-      color:rgb(247, 244, 244);
+
+    li {
+      padding: .6rem;
+      
+      a {
+        text-decoration: none;
+        color:rgb(247, 244, 244);
+      }
     }
   }
 }

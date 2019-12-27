@@ -1,0 +1,28 @@
+.urlCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $DarkViolet;
+  background-image: url("../../../images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: -30px;
+  height: 120px;
+  border-radius: 10px;
+  top: -60px;
+
+  &__input {
+    width: 85%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 5px;
+    color: $GreyViolet;
+
+    &::placeholder {
+      color: $Grey;
+      font-weight: $Regular;
+    }
+  }
+}

@@ -1,9 +1,12 @@
 import React from 'react'
+import UrlCard from '../Cards/UrlCard';
 
 export default function Main() {
   return (
     <div className="main">
-      <h1>testing</h1>
+      <div>
+        <UrlCard />
+      </div>
     </div>
   )
 }

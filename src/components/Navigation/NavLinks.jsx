@@ -40,7 +40,7 @@ export default function NavLinks() {
     menuStyles: {
       position: "absolute", 
       left: "1.3rem", 
-      top: "15vh",
+      top: "18.5vh",
       width: "88%",
       textAlign: "center"
     },

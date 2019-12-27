@@ -1,0 +1,20 @@
+.roundBtn {
+
+  &__container {
+    background-color: $Cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 3rem;
+    width: 60%;
+    border-radius: 50px;
+    margin-bottom: 2.5rem;
+  }
+
+  &__text {
+    color: white;
+    font-weight: $Bold;
+    letter-spacing: .3px;
+  }
+}

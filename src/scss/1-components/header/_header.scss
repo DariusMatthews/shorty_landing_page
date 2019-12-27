@@ -1,5 +1,6 @@
 .header {
   display: grid;
+  text-align: center;
 
     &__imgContainer {
       overflow: hidden;
@@ -10,5 +11,17 @@
       width: 575px;
       padding-left: 25px;
       padding-top: 1rem;
+      margin-bottom: 2.25rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+      color: $DarkBlue;
+      margin-bottom: .8rem;
+    }
+
+    &__content {
+      color: $GreyViolet;
+      margin-bottom: 2rem;
     }
 }

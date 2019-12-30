@@ -4,4 +4,20 @@
   padding: 0 25px;
   background-color: rgb(240, 241, 246);
   display: grid;
+
+  &__text {
+    text-align: center;
+    position: relative;
+    margin-bottom: 5.5rem;
+  }
+
+  &__header {
+    font-size: 1.5rem;
+    color: $DarkBlue;
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    color: $GreyViolet;
+  }
 }

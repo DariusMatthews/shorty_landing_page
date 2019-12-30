@@ -1,0 +1,35 @@
+.contentCard {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 325px;
+  height: 250px;
+  margin: 0 auto;
+  padding: 0 1.3rem 2rem;
+  margin-bottom: 4rem;
+
+  &__imgContainer {
+    position: relative;
+    top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $DarkViolet;
+    padding: 1.3rem;
+    border-radius: 100px;
+  }
+
+  &__title {
+    font-size: 1.15rem;
+    color: $DarkBlue;
+    position: relative;
+    top: -20px;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: .85rem;
+    color: $GreyViolet;
+  }
+}

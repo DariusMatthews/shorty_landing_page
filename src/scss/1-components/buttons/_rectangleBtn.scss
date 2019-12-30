@@ -1,0 +1,20 @@
+.rectBtn {
+
+  &__container {
+    width: 85%;
+    text-align: center;
+    background-color: $Cyan;
+    border-radius: 5px;
+  }
+
+  &__btn {
+    width: inherit;
+    height: inherit;
+    padding: .6rem 0;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: $Bold;
+  }
+}

@@ -4,10 +4,11 @@
   flex-direction: column;
   align-items: center;
   max-width: 325px;
-  height: 250px;
+  height: 260px;
   margin: 0 auto;
   padding: 0 1.3rem 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
+  border-radius: 8px;
 
   &__imgContainer {
     position: relative;
@@ -31,5 +32,6 @@
     text-align: center;
     font-size: .85rem;
     color: $GreyViolet;
+    line-height: 1.45rem;
   }
 }

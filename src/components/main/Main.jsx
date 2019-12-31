@@ -21,13 +21,13 @@ export default function Main() {
         cardTitle={CardContent[0].title}
         cardText={CardContent[0].text}
       />
-      <hr />
+      {/* <hr /> */}
       <ContentCard
         imgSrc={DetailPic}
         cardTitle={CardContent[1].title}
         cardText={CardContent[1].text}
       />
-      <hr />
+      {/* <hr /> */}
       <ContentCard
         imgSrc={CustomizePic}
         cardTitle={CardContent[2].title}

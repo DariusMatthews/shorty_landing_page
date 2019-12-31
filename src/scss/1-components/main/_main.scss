@@ -20,4 +20,13 @@
   &__content {
     color: $GreyViolet;
   }
+
+  &__bar {
+    height: .5rem;
+    width: 260px;
+    margin: 0 auto;
+    background-color: $Cyan;
+    transform: translate(0) rotate(90deg);
+    z-index: 1;
+  }
 }

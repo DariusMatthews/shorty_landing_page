@@ -39,7 +39,7 @@ export default function NavLinks() {
   const styles = {
     menuStyles: {
       position: "absolute", 
-      left: "1.3rem", 
+      left: "1.35rem", 
       top: "18.5vh",
       width: "88%",
       textAlign: "center"
@@ -48,6 +48,7 @@ export default function NavLinks() {
       color: "rgb(247, 244, 244)",
       backgroundColor: "hsl(180, 66%, 49%)",
       width: "90%",
+      maxWidth: "375px",
       border: "none",
       borderRadius: "50px",
       paddingTop: ".7rem",
@@ -67,7 +68,7 @@ export default function NavLinks() {
       {/*
         changing navbar based off screen size
       */}
-      {screenSize < 768
+      {screenSize <= 768
         ? (
           <div>
             <button onClick={toggleLinks} className="Navlinks__MenuButton">

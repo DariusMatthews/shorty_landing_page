@@ -1,0 +1,19 @@
+.cta {
+  height: 300px;
+  margin: 0 -25px;
+  background-color: $DarkViolet;
+  background-image: url('../../../images/bg-boost-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+
+  &__boost {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}

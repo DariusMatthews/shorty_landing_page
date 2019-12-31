@@ -3,6 +3,7 @@ import './App.scss';
 import Navbar from './components/Navigation/Navbar';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
+import Cta from './components/CTA/CallToAction';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Header />
       <Main />
+      <Cta />
     </div>
   );
 }

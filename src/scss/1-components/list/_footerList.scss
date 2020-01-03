@@ -1,0 +1,19 @@
+.Flist {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  &__title {
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+  &__listItem {
+    list-style: none;
+    margin: .5rem 0;
+  }
+
+  &__listLink {
+    text-decoration: none;
+    color: $GreyViolet;
+  }
+}

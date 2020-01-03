@@ -9,7 +9,19 @@
 
   &__title {
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
+  }
+
+  &__list {
+    margin-bottom: .5rem;
+  }
+
+  &__socials {
+    margin-bottom: .7rem;
+  }
+
+  &__socialLinks {
+    padding: 0 .7rem;
   }
 }

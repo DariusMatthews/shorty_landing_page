@@ -1,14 +1,14 @@
 const FooterContent = [
   {
-    Title: "Features",
+    title: "Features",
     links: ["Link Shortening", "Branded Links", "Analytics"]
   },
   {
-    Title: "Resources",
+    title: "Resources",
     links: ["Blog", "Developers", "Support"]
   },
   {
-    Title: "Company",
+    title: "Company",
     links: ["About", "Our Team", "Careers", "Contact"]
   }
 ]

@@ -4,6 +4,7 @@ import Navbar from './components/Navigation/Navbar';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Cta from './components/CTA/CallToAction';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <Main />
       <Cta />
+      <Footer />
     </div>
   );
 }

@@ -10,7 +10,7 @@ export default function FooterList({ title, contents }) {
         key={index}
         className="Flist__listItem">
           <a
-          href="#" 
+          href="/" 
           className="Flist__listLink">
             {content}
           </a>

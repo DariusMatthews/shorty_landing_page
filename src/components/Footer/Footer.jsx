@@ -28,13 +28,13 @@ export default function Footer() {
       </div>
       <div className="footer__socials">
 
-        <a href="#" className="footer__socialLinks"><img src={facebook} alt="facebook" className="footer__socialIMG" /></a>
+        <a href="/" className="footer__socialLinks"><img src={facebook} alt="facebook" className="footer__socialIMG" /></a>
 
-        <a href="#" className="footer__socialLinks"><img src={twitter} alt="twitter" className="footer__socialIMG" /></a>
+        <a href="/" className="footer__socialLinks"><img src={twitter} alt="twitter" className="footer__socialIMG" /></a>
 
-        <a href="#" className="footer__socialLinks"><img src={pinterest} alt="pinterest" className="footer__socialIMG" /></a>
+        <a href="/" className="footer__socialLinks"><img src={pinterest} alt="pinterest" className="footer__socialIMG" /></a>
 
-        <a href="#" className="footer__socialLinks"><img src={instagram} alt="instagram" className="footer__socialIMG" /></a>
+        <a href="/" className="footer__socialLinks"><img src={instagram} alt="instagram" className="footer__socialIMG" /></a>
 
       </div>
     </div>

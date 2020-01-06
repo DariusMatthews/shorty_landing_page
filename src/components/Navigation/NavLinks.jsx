@@ -13,7 +13,7 @@ export default function NavLinks() {
   });
 
   // toggle links menu function
-  const toggleLinks = () => setShowLinks(prevShowLnks => !prevShowLnks);
+  const toggleLinks = () => setShowLinks(prevShowLinks => !prevShowLinks);
 
   //Dropdown menu function to show links on mobile
   const dropDownMenu = () => {
@@ -40,7 +40,7 @@ export default function NavLinks() {
     menuStyles: {
       position: "absolute", 
       left: "1.35rem", 
-      top: "18.5vh",
+      top: "14.5vh",
       width: "88%",
       textAlign: "center"
     },

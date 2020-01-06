@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import UrlCard from '../Cards/UrlCard';
 import ContentCard from '../Cards/ContentCard';
 import CardContent from '../../content/CardContent';
@@ -7,13 +7,40 @@ import DetailPic from '../../images/icon-detailed-records.svg'
 import CustomizePic from '../../images/icon-fully-customizable.svg'
 
 export default function Main() {
+  const [originalUrl, setOriginalUrl] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  // tracking url pasted into url card input 
+  const handleChange = e => {
+    const {value} = e.target;
+    setOriginalUrl(() => value);
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    if (originalUrl === '') {
+      setErrorMessage('Please add a link');
+    } else {
+      setErrorMessage('');
+    }
+
+    console.log('submitted', originalUrl);
+  }
+
   return (
     <div className="main">
 
       {/* main url card */}
-      <div>
-        <UrlCard />
-      </div>
+        <UrlCard
+          value={originalUrl}
+          onChange={handleChange}
+          onSubmit={handleSubmit}
+          errorMessage={errorMessage}
+          errorClass={(errorMessage.length > 0 ) ? 'urlCard__inputError' : null}
+        />
+
+      {/* shortened link card */}
 
       {/* main text content */}
       <div className="main__text">

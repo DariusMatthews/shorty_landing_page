@@ -1,8 +1,7 @@
 .urlCard {
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   background-color: $DarkViolet;
   background-image: url("../../../images/bg-shorten-mobile.svg");
@@ -12,6 +11,15 @@
   height: 150px;
   border-radius: 10px;
   top: -77px;
+
+  &__form {
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
   &__input {
     width: 85%;
@@ -24,5 +32,23 @@
       color: $Grey;
       font-weight: $Regular;
     }
+  }
+
+  &__inputError {
+    border-style: solid;
+    border-width: 3px;
+    border-color: $Red;
+
+    &::placeholder {
+      color: $Red;
+    }
+  }
+
+  &__errorMSG {
+    align-self: flex-start;
+    margin-left: 1.5rem;
+    color: $Red;
+    font-style: italic;
+    font-size: .7rem;
   }
 }

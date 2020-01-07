@@ -8,10 +8,12 @@ import CustomizePic from '../../images/icon-fully-customizable.svg'
 
 export default function Main() {
   // state for original url, shortened url card and error message
+  const [submitted, setSubmit] = useState(false);
   const [originalUrl, setOriginalUrl] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [shortCard, setShortCard] = useState({});
   const [cardArray, setCardArray] = useState([]);
+  const [storageArray, setStorageArray] = useState(null);
 
   // api call to shorten links 
   const getLink = () => {
@@ -35,34 +37,39 @@ export default function Main() {
     setOriginalUrl(value);
   }
 
-  // handle submit to shorten url 
+  // handle submit of link form
   const handleSubmit = e => {
     e.preventDefault();
+    setSubmit(true);
 
     if (originalUrl === '') {
       setErrorMessage('Please add a link');
     } else {
       getLink();
-      console.log(cardArray);
       setOriginalUrl('');
       setErrorMessage('');
     }
   }
 
-  // useEffect(() => {
-  //   const storageArray = localStorage.getItem('cards');
-  //   JSON.parse(storageArray);
-  //   console.log(storageArray);
-  // }, [])
+  // setting local storage if submitted
+  if (submitted === true) {
+    localStorage.setItem('cards', JSON.stringify(cardArray));
+  }
+
+  // effect hook to mount storage on initial render 
+  useEffect(() => {
+    setStorageArray(JSON.parse(localStorage.getItem('cards')));
+  }, []);
 
   // effect hook to mount the card array component
   useEffect(() => {
     setCardArray(prevCard => {
       return [...prevCard, shortCard];
     });
-    localStorage.setItem('cards', JSON.stringify(cardArray));
   }, [shortCard]);
 
+
+  // return statement 
   return (
     <div className="main">
 
@@ -74,8 +81,27 @@ export default function Main() {
         errorMessage={errorMessage}
       />
 
-      {/* shortened link card */}
-      {/* filtering array to get rid of initial empty state */
+      {/*
+        SHORTENED LINK CARDS
+          - two arrays mapped out
+            * one for storage
+            * other for new links added
+
+          - storage array only maps if state isn't null
+            
+          - filtering array to get rid of initial empty state 
+      */}
+
+      {/* Storage Links */
+        storageArray !== null && storageArray.filter(storage => Object.keys(storage).length !== 0).map((card, index) => (
+          <h1 key={index}>
+            {card.fullUrl} <br />
+            {card.shortUrl}
+          </h1>
+        ))
+      }
+
+      {/* New Links */
         cardArray.filter(card => Object.keys(card).length !== 0).map((card, index) => (
           <h1 key={index}>
             {card.fullUrl} <br />

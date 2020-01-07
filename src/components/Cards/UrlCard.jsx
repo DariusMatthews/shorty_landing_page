@@ -9,7 +9,7 @@ export default function UrlCard({onChange, onSubmit, value, errorMessage, errorC
         <input
           name="originalUrl"
           onChange={onChange}
-          className={`urlCard__input ${errorClass}`}
+          className={(errorMessage.length > 0 ) ? ' urlCard__input urlCard__inputError' : "urlCard__input"}
           type="text"
           placeholder="Shorten a link here..."
           value={value}

@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-position: right;
   background-position-y: -30px;
-  height: 150px;
+  height: 155px;
   border-radius: 10px;
   top: -77px;
 
@@ -40,14 +40,14 @@
     border-color: $Red;
 
     &::placeholder {
-      color: $Red;
+      color: hsla(0, 87%, 67%, .5);
     }
   }
 
   &__errorMSG {
     align-self: flex-start;
     margin-left: 1.5rem;
-    color: $Red;
+    color: hsla(0, 87%, 67%, .7);
     font-style: italic;
     font-size: .7rem;
   }

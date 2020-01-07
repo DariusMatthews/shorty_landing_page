@@ -1,7 +1,7 @@
 import React from 'react';
 import RectangleButton from '../Buttons/RectangleButton';
 
-export default function UrlCard({onChange, onSubmit, value, errorMessage, errorClass}) {
+export default function UrlCard({onChange, onSubmit, value, errorMessage}) {
   return (
     <div className="urlCard">
       <form

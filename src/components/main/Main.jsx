@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import UrlCard from '../Cards/UrlCard';
 import ContentCard from '../Cards/ContentCard';
 import CardContent from '../../content/CardContent';
@@ -7,35 +7,35 @@ import DetailPic from '../../images/icon-detailed-records.svg'
 import CustomizePic from '../../images/icon-fully-customizable.svg'
 
 export default function Main() {
-  // state for original url, shortened url and error messages
+  // state for original url, shortened url card and error message
   const [originalUrl, setOriginalUrl] = useState('');
-  const [shortUrl, setShortUrl] = useState('');
-  const [linkCards, setLinkCards] = useState([]);
   const [errorMessage, setErrorMessage] = useState('');
+  const [shortCard, setShortCard] = useState({});
+  const [cardArray, setCardArray] = useState([]);
 
   // api call to shorten links 
-  const getLink = async () => {
-    const response = await fetch('https://rel.ink/api/links/', {
+  const getLink = () => {
+    fetch('https://rel.ink/api/links/', {
       method: 'post',
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ url: `${originalUrl}` })
-    });
-    const data = await response.json()
-
-    const { hashid: id } = data;
-
-    setShortUrl(`https://rel.ink/${id}`);
+      body: JSON.stringify({ url: originalUrl })
+    })
+      .then(res => res.json())
+      .then(data => setShortCard({
+        fullUrl: data.url,
+        shortUrl: `https://rel.ink/${data.hashid}`
+      }));
   }
 
-  // tracking url pasted into url card input 
+  // tracking url input change
   const handleChange = e => {
     const { value } = e.target;
     setOriginalUrl(value);
   }
 
-  // handle submit from url card form 
+  // handle submit to shorten url 
   const handleSubmit = e => {
     e.preventDefault();
 
@@ -43,19 +43,25 @@ export default function Main() {
       setErrorMessage('Please add a link');
     } else {
       getLink();
-      setLinkCards(prevCards => {
-        return [
-          ...prevCards,
-          {
-            oUrl: originalUrl,
-            sUrl: shortUrl
-          }
-        ]
-      });
+      console.log(cardArray);
       setOriginalUrl('');
       setErrorMessage('');
     }
   }
+
+  // useEffect(() => {
+  //   const storageArray = localStorage.getItem('cards');
+  //   JSON.parse(storageArray);
+  //   console.log(storageArray);
+  // }, [])
+
+  // effect hook to mount the card array component
+  useEffect(() => {
+    setCardArray(prevCard => {
+      return [...prevCard, shortCard];
+    });
+    localStorage.setItem('cards', JSON.stringify(cardArray));
+  }, [shortCard]);
 
   return (
     <div className="main">
@@ -69,15 +75,14 @@ export default function Main() {
       />
 
       {/* shortened link card */}
-      <ul>
-
-      {linkCards.map((linkCard, index) => (
-        <li key={index}>
-          {linkCard.oUrl} <br />
-          {linkCard.sUrl}
-        </li>
-      ))}
-      </ul>
+      {/* filtering array to get rid of initial empty state */
+        cardArray.filter(card => Object.keys(card).length !== 0).map((card, index) => (
+          <h1 key={index}>
+            {card.fullUrl} <br />
+            {card.shortUrl}
+          </h1>
+        ))
+      }
 
       {/* main text content */}
       <div className="main__text">

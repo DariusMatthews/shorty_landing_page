@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import hamburgerMenu from '../../images/hamburgerMenu.svg';
 
 export default function NavLinks() {
 
   // setting state
-  const [screenSize, setScreenSize] = useState(window.screen.width);
+  const [screenSize, setScreenSize] = useState(window.innerWidth);
   const [showLinks, setShowLinks] = useState(false);
 
-  // event listener for screen size to toggle nav menu
-  window.addEventListener('resize', () => {
-    setScreenSize(window.screen.width);
-  });
+  useEffect(() => {
+    // event listener for screen size to toggle nav menu
+    window.addEventListener('resize', () => {
+      setScreenSize(window.innerWidth);``
+    });
+  })
 
   // toggle links menu function
   const toggleLinks = () => setShowLinks(prevShowLinks => !prevShowLinks);

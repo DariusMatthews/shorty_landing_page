@@ -2,10 +2,18 @@ import React, {useState} from 'react'
 
 export default function ShortenedCard({fullUrl, shortUrl}) {
   const [click, setClick] = useState(false);
+  const [copyLink, setCopyLink] = useState();
 
+  
+  // copy link to clipboard on click 
   const onClicked = () => {
+    let textField = document.createElement('textarea')
+    textField.value = copyLink.innerText;
+    document.body.appendChild(textField);
+    textField.select();
+    document.execCommand('copy');
+    textField.remove();
     setClick(true);
-    console.log("clicked");
   }
 
   return (
@@ -16,8 +24,10 @@ export default function ShortenedCard({fullUrl, shortUrl}) {
       </p>
       </div>
       <p className="shortCard__shortUrl">
+        {/* use ref={} to get link information on click  */}
         <a
           href={shortUrl}
+          ref={input => setCopyLink(input)}
           target="_blank"
           rel='noreferrer noopener'
           className="shortCard__shortLink"

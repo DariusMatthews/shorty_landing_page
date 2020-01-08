@@ -17,7 +17,7 @@
     height: inherit;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   }
 
@@ -25,6 +25,7 @@
     width: 85%;
     padding: 12px 14px;
     border: none;
+    margin-bottom: 1rem;
     border-radius: 5px;
     color: $GreyViolet;
 
@@ -35,6 +36,7 @@
   }
 
   &__inputError {
+    margin-bottom: .2rem;
     border-style: solid;
     border-width: 3px;
     border-color: $Red;
@@ -47,6 +49,7 @@
   &__errorMSG {
     align-self: flex-start;
     margin-left: 1.5rem;
+    margin-bottom: .5rem;
     color: hsla(0, 87%, 67%, .7);
     font-style: italic;
     font-size: .7rem;

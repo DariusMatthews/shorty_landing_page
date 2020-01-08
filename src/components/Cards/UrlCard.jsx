@@ -14,7 +14,9 @@ export default function UrlCard({onChange, onSubmit, value, errorMessage}) {
           placeholder="Shorten a link here..."
           value={value}
         />
-        <p className="urlCard__errorMSG">{errorMessage}</p>
+        <label className="urlCard__errorMSG">     
+          {errorMessage}
+        </label>
         <RectangleButton
           text="Shorten It!"
         />

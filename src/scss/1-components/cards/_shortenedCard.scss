@@ -1,0 +1,58 @@
+.shortCard {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .6rem 0;
+  border-radius: 5px;
+  margin-bottom: 1.4rem;
+
+  &__cardBorder {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1.5px solid rgb(240, 241, 246);
+  }
+  
+  &__fullUrl {
+    display: inline-block;
+    width: calc(94%);
+    font-size: .85rem;
+    padding: .2rem 0 .2rem 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__shortUrl {
+    padding: .6rem 0 .6rem 1rem;
+  }
+
+  &__shortLink {
+    font-size: .90rem;
+    text-decoration: none;
+    color: $Cyan;
+
+    &:hover {
+      color: darken($Cyan, 10%);
+    }
+  }
+
+  &__btn {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $Cyan;
+    border-radius: 5px;
+    padding: .4rem 0;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: $Bold;
+    cursor: pointer;
+
+    &--clicked {
+      background-color: $DarkViolet;
+    }
+  }
+}

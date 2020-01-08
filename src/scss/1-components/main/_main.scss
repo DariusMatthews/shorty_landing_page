@@ -5,6 +5,13 @@
   background-color: rgb(240, 241, 246);
   display: grid;
 
+  &__links {
+    position: relative;
+    top: -3rem;
+    margin-bottom: .5rem;
+    overflow: hidden;
+  }
+
   &__text {
     text-align: center;
     position: relative;

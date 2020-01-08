@@ -2,16 +2,17 @@ import React, { useState, useEffect } from 'react'
 import UrlCard from '../Cards/UrlCard';
 import ContentCard from '../Cards/ContentCard';
 import CardContent from '../../content/CardContent';
-import BrandPic from '../../images/icon-brand-recognition.svg'
-import DetailPic from '../../images/icon-detailed-records.svg'
-import CustomizePic from '../../images/icon-fully-customizable.svg'
+import ShortenedCard from '../Cards/ShortenedCard';
+import BrandPic from '../../images/icon-brand-recognition.svg';
+import DetailPic from '../../images/icon-detailed-records.svg';
+import CustomizePic from '../../images/icon-fully-customizable.svg';
 
 export default function Main() {
   // state for original url, shortened url card and error message
   const [submitted, setSubmit] = useState(false);
   const [originalUrl, setOriginalUrl] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [shortCard, setShortCard] = useState({});
+  const [shortenedCard, setShortCard] = useState({});
   const [cardArray, setCardArray] = useState([]);
   const [storageArray, setStorageArray] = useState(null);
 
@@ -64,9 +65,9 @@ export default function Main() {
   // effect hook to mount the card array component
   useEffect(() => {
     setCardArray(prevCard => {
-      return [...prevCard, shortCard];
+      return [...prevCard, shortenedCard];
     });
-  }, [shortCard]);
+  }, [shortenedCard]);
 
 
   // return statement 
@@ -91,24 +92,27 @@ export default function Main() {
             
           - filtering array to get rid of initial empty state 
       */}
+      <div className="main__links">
+        {/* Storage Links */
+          storageArray !== null && storageArray.filter(storage => Object.keys(storage).length !== 0).map((card, index) => (
+            <ShortenedCard
+              key={index}
+              fullUrl={card.fullUrl}
+              shortUrl={card.shortUrl}
+            />
+          ))
+        }
 
-      {/* Storage Links */
-        storageArray !== null && storageArray.filter(storage => Object.keys(storage).length !== 0).map((card, index) => (
-          <h1 key={index}>
-            {card.fullUrl} <br />
-            {card.shortUrl}
-          </h1>
-        ))
-      }
-
-      {/* New Links */
-        cardArray.filter(card => Object.keys(card).length !== 0).map((card, index) => (
-          <h1 key={index}>
-            {card.fullUrl} <br />
-            {card.shortUrl}
-          </h1>
-        ))
-      }
+        {/* New Links */
+          cardArray.filter(card => Object.keys(card).length !== 0).map((card, index) => (
+            <ShortenedCard
+              key={index}
+              fullUrl={card.fullUrl}
+              shortUrl={card.shortUrl}
+            />
+          ))
+        }
+      </div>
 
       {/* main text content */}
       <div className="main__text">

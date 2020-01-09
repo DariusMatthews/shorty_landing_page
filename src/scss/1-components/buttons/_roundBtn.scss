@@ -8,9 +8,13 @@
     margin: 0 auto;
     height: 3rem;
     width: 60%;
-    max-width: 300px;
+    max-width: 200px;
     border-radius: 50px;
     margin-bottom: 2.5rem;
+
+    &:hover {
+      background-color: lighten($Cyan, 25%);
+    }
   }
 
   &__text {
@@ -22,5 +26,6 @@
     background: none;
     border: none;
     outline: none;
+    cursor: pointer;
   }
 }

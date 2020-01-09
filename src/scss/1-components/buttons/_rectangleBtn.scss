@@ -5,6 +5,10 @@
     text-align: center;
     background-color: $Cyan;
     border-radius: 5px;
+
+    &:hover {
+      background-color: lighten($Cyan, 25%);
+    }
   }
 
   &__btn {

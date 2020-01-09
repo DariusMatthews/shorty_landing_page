@@ -90,7 +90,7 @@ export default function Main() {
 
           - storage array only maps if state isn't null
             
-          - filtering array to get rid of initial empty state 
+          - filtering arrays to get rid of initial empty state 
       */}
       <div className="main__links">
         {/* Storage Links */

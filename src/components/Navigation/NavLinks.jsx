@@ -10,9 +10,9 @@ export default function NavLinks() {
   useEffect(() => {
     // event listener for screen size to toggle nav menu
     window.addEventListener('resize', () => {
-      setScreenSize(window.innerWidth);``
+      setScreenSize(window.innerWidth);
     });
-  })
+  }, [screenSize])
 
   // toggle links menu function
   const toggleLinks = () => setShowLinks(prevShowLinks => !prevShowLinks);

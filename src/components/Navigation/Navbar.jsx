@@ -6,7 +6,7 @@ import NavLinks from './NavLinks';
 export default function NavBar() {
   return (
     <div className="NavBar">
-      <img src={logo} alt="logo"/>
+      <img className="NavBar__img" src={logo} alt="logo"/>
       <NavLinks />
     </div>
   );

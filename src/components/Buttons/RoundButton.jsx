@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function RoundButton({text}) {
+export default function RoundButton({text, btnStyle, btnText}) {
   return (
-    <div className="roundBtn__container">
-      <button className="roundBtn__text">{text}</button>
+    <div className={btnStyle}>
+      <button className={btnText}>{text}</button>
     </div>
   )
 }

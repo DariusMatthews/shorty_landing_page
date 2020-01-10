@@ -19,6 +19,7 @@ export default function UrlCard({onChange, onSubmit, value, errorMessage}) {
         </label>
         <RectangleButton
           text="Shorten It!"
+          btnStyle="urlCard__btnContainer"
         />
       </form>
     </div>

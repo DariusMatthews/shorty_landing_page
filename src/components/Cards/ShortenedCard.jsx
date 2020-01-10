@@ -18,13 +18,13 @@ export default function ShortenedCard({fullUrl, shortUrl}) {
 
   return (
     <div className="shortCard">
-      <div className="shortCard__cardBorder">
+      <div className="shortCard__fullUrlContainer">
       <p className="shortCard__fullUrl">
         {fullUrl}
       </p>
       </div>
       <p className="shortCard__shortUrl">
-        {/* use ref={} to get link information on click  */}
+        {/* use ref={} to get link information on click to copy to clipboard */}
         <a
           href={shortUrl}
           ref={input => setCopyLink(input)}

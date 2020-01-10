@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function RectangleButton({text, onPress}) {
+export default function RectangleButton({text, btnStyle}) {
   return (
-    <div className="rectBtn__container">
+    <div className={btnStyle + " rectBtn__container"}>
       <button type="submit" className="rectBtn__btn">{text}</button>
     </div>
   )

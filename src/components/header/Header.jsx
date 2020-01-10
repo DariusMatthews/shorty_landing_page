@@ -10,7 +10,11 @@ export default function Header() {
       </div>
       <h1 className="header__title">More than just shorter links</h1>
       <p className="header__content">Build your brand's recognition and get detailed insights on how your links are performing.</p>
-      <RoundButton text="Get Started" />
+      <RoundButton
+        text="Get Started"
+        btnStyle="roundBtn__container"
+        btnText="roundBtn__text"
+      />
     </div>
   )
 }

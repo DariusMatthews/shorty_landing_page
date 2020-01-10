@@ -46,6 +46,10 @@ export default function NavLinks() {
       width: "88%",
       textAlign: "center"
     },
+    fullMenu: {
+      display: "flex",
+
+    },
     dropBtn: {
       color: "rgb(247, 244, 244)",
       backgroundColor: "hsl(180, 66%, 49%)",
@@ -55,7 +59,11 @@ export default function NavLinks() {
       borderRadius: "50px",
       paddingTop: ".7rem",
       paddingBottom: ".7rem",
-      fontWeight: 700
+      fontWeight: 700,
+      cursor: "pointer",
+      ':hover': {
+        backgroundColor: "hsla(180, 66%, 49%, .3)"
+      }
     },
     bottomBorder: {
       borderBottom: "1px solid hsla(257, 7%, 63%, .05)",
@@ -82,15 +90,15 @@ export default function NavLinks() {
           </div>
         )
         : (
-          <div style={{ display: "flex" }}>
+          <div className="Navlinks__container">
             <ul className="Navlinks__list" style={{ display: "flex" }}>
               <li><a href="/">Features</a></li>
               <li><a href="/">Pricing</a></li>
               <li><a href="/">Resources</a></li>
             </ul>
             <ul className="Navlinks__list" style={{ display: "flex" }}>
-              <li><a href="/">Login</a></li>
-              <li><button>Sign Up</button></li>
+              <li style={{ paddingTop: "1.2rem" }}><a href="/">Login</a></li>
+              <li style={{ position: "relative", top: ".35rem" }}><button className="Navlinks__btn">Sign Up</button></li>
             </ul>
           </div>
         )

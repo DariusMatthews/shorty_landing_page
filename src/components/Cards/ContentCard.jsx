@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function ContentCard({imgSrc, cardTitle, cardText}) {
+export default function ContentCard({imgSrc, cardTitle, cardText, contentStyle, imgStyle}) {
   return (
-    <div className="contentCard">
-      <div className="contentCard__imgContainer">
+    <div className={`${contentStyle} contentCard`}>
+      <div className={`${imgStyle} contentCard__imgContainer`}>
         <img src={imgSrc} alt={cardTitle} />
       </div>
       <h1 className="contentCard__title">{cardTitle}</h1>

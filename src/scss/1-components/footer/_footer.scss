@@ -24,4 +24,10 @@
   &__socialLinks {
     padding: 0 .7rem;
   }
+  
+  &__socialIMG {
+    &:hover {
+      filter: invert(.2) sepia(1) saturate(2) hue-rotate(118deg);
+    }
+  }
 }

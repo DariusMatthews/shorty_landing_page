@@ -1,0 +1,38 @@
+@media only screen and (min-width: $desktop) {
+  .container {
+    margin: 0 175px;
+  }
+
+  .header {
+    &__imgContainer {
+      margin-right: -175px;
+      padding-left: 4rem;
+    }
+
+    &__img {
+      width: 700px;
+      height: 500px;
+    }
+
+    &__title {
+      font-size: 4rem;
+    }
+  }
+
+  .main {
+    margin: 0 -175px;
+    padding: 0 175px;
+  }
+
+  .cta {
+    margin: 0 -175px;
+    padding-right: 175px;
+    padding-left: 175px;
+  }
+
+  .footer {
+    margin: 0 -175px;
+    padding-right: 175px;
+    padding-left: 175px;
+  }
+}

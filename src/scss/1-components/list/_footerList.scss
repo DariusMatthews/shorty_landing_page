@@ -15,5 +15,9 @@
   &__listLink {
     text-decoration: none;
     color: $GreyViolet;
+
+    &:Hover {
+      color: $Cyan;
+    }
   }
 }

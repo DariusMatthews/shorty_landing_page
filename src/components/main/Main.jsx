@@ -123,20 +123,24 @@ export default function Main() {
       {/* main content cards w/ line connector */}
       <ContentCard
         imgSrc={BrandPic}
+        imgStyle="main__graph"
         cardTitle={CardContent[0].title}
         cardText={CardContent[0].text}
+        contentStyle="main__br"
       />
-      <div className="main__bar" />
+      <div className="main__bar main__dr" />
       <ContentCard
         imgSrc={DetailPic}
         cardTitle={CardContent[1].title}
         cardText={CardContent[1].text}
+        contentStyle="main__dr"
       />
-      <div className="main__bar" />
+      <div className="main__bar main__fc" />
       <ContentCard
         imgSrc={CustomizePic}
         cardTitle={CardContent[2].title}
         cardText={CardContent[2].text}
+        contentStyle="main__fc"
       />
     </div>
   )
